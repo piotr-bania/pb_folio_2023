@@ -3,11 +3,9 @@ import React from 'react'
 const Hero = () => {
     return (
         <section>
-            <h1>Bringing extraterrestrial worlds to life on the web</h1>
-            <h2>Innovative solutions for a futuristic digital landscape</h2>
+            <h1>Transforming <br /> the digital universe <br /> through code <br /> and creativity</h1>
+            <h3>Fusing technology <br /> and imagination <br /> to create something <br /> truly unique</h3>
             <button>View my latest missions</button>
-
-            <p>A random paragraph goes here. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </section>
     )
 }
