@@ -6,7 +6,7 @@ const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <>
+        <section>
             <header>
                 <Link href="/">
                 <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
@@ -26,7 +26,7 @@ const [isOpen, setIsOpen] = useState(false)
                     <Link href="/public/resume/Piotr_Bania_Resume.pdf"><button className='button'>Resume</button></Link>
                 </nav>
             </header>
-        </>
+        </section>
     )
 }
 

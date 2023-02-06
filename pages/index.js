@@ -14,9 +14,7 @@ export default function Home() {
             </Head>
 
             <main>
-                <section>
-                    <Hero/>
-                </section>
+                <Hero/>
             </main>
         </>
     )
