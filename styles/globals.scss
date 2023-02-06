@@ -2,8 +2,8 @@
 @import url("https://use.typekit.net/wjp2kcg.css");
 
 @font-face {
-  font-family: "arkitech";
-  src: url(/public/fonts/arkitech/arkitech_light.ttf);
+    font-family: "arkitech";
+    src: url(/public/fonts/arkitech/arkitech_light.ttf);
 }
 
 /* ------------------------------ Variables ------------------------------ */
@@ -31,78 +31,82 @@ $header_2: clamp(1.4rem, 3.25vw + 0.59rem, 4rem);
 $header_1: clamp(1.58rem, 5.09vw + 0.3rem, 5.65rem);
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style-type: none;
 }
 
 body {
-  background: linear-gradient(90deg, $darker, $dark);
-  color: $off_white;
-  font-family: $text_font;
-  font-size: $paragraph;
-  font-weight: 300;
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5), 1px 1px 2px rgba(0, 0, 0, 0.1);
-  line-height: 1.4;
-  margin: 20px auto;
-  user-select: none;
-  overflow-x: hidden;
+    background: linear-gradient(90deg, $darker, $dark);
+    color: $off_white;
+    font-family: $text_font;
+    font-size: $paragraph;
+    font-weight: 300;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5), 1px 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    margin: auto;
+    user-select: none;
+    overflow-x: hidden;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: $header_font;
-  font-style: normal;
-  line-height: 0.85;
-  margin: 20px auto;
+    font-family: $header_font;
+    font-style: normal;
+    line-height: 0.85;
+    margin: 20px auto;
 }
 
 h1 {
-  font-size: $header_1;
-  font-weight: 700;
+    font-size: $header_1;
+    font-weight: 700;
+    color: $off_white;
 }
 
 h2 {
-  font-size: $header_2;
-  font-weight: 300;
+    font-size: $header_2;
+    font-weight: 500;
 }
 
 h3 {
-  font-size: $header_3;
-  font-weight: 300;
+    font-size: $header_3;
+    font-weight: 500;
+    color: $grey-text;
 }
 
 h4 {
-  font-size: $header_4;
-  font-weight: 300;
+    font-size: $header_4;
+    font-weight: 300;
+    color: $red;
 }
 
 p {
-  font-size: $paragraph;
+    font-size: $paragraph;
+    color: $off_white;
 }
 
 a {
-  font-family: $text_font;
-  font-size: $paragraph;
-  font-weight: 300;
-  color: $grey-text;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
+    font-family: $text_font;
+    font-size: $paragraph;
+    font-weight: 300;
+    color: $grey-text;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 
-  &:hover {
-    color: $green;
-  }
+    &:hover {
+        color: $green;
+    }
 
-  &:focus {
-    color: $red;
-  }
+    &:focus {
+        color: $red;
+    }
 }
 
 // ------------------------------ Strips ------------------------------
@@ -141,63 +145,71 @@ a {
 
 // ------------------------------ Buttons ------------------------------
 button {
-  font-family: $text_font;
-  font-size: $links;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: $white;
-  background: linear-gradient(-45deg, $purple 0%, $dark 100%);
-  border-radius: 30px 10px 20px 10px;
-  padding: 8px 16px;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
-  border: none;
-  background-size: 400% 400%;
-  animation: button_animation 5s ease-in-out infinite;
-  transition: all 0.3s ease-in-out;
+    font-family: $text_font;
+    font-size: $links;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+    background: linear-gradient(-45deg, $purple 0%, $dark 100%);
+    border-radius: 30px 10px 20px 10px;
+    padding: 12px 24px;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    background-size: 400% 400%;
+    animation: button_animation 5s ease-in-out infinite;
+    transition: all 0.3s ease-in-out;
 
-  &:hover {
-    cursor: pointer;
-    background: linear-gradient(-45deg, $green 0%, rgba(97, 245, 112, 0.5) 100%);
-  }
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(-45deg, $green 0%, rgba(97, 245, 112, 0.5) 100%);
+    }
 }
 
 @keyframes button_animation {
-  0% {
-    background-position: 0 50%;
-  }
+    0% {
+        background-position: 0 50%;
+    }
 
-  50% {
-    background-position: 100% 50%;
-  }
+    50% {
+        background-position: 100% 50%;
+    }
 
-  100% {
-    background-position: 0 50%;
-  }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+// ------------------------------ Sections ------------------------------
+section {
+    display: grid;
 }
 
 // ------------------------------ Desktop ------------------------------
 @media screen and (min-width: 1024px) {
-  section {
-    margin: 80px auto;
-    padding: 0 40px;
-  }
+    section {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        margin: auto 120px;
+    }
 }
 
 // ------------------------------ Tablet ------------------------------
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  section {
-    margin: 60px auto;
-    padding: 0 20px;
-  }
+    section {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 12px;
+        margin: auto 40px;
+    }
 }
 
 // ------------------------------ Smartphone ------------------------------
 @media screen and (max-width: 767px) {
-  section {
-    margin: 40px auto;
-    padding: 0 10px;
-  }
+    section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin: auto 10px;
+    }
 }

@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "@react-three/drei": "^9.56.17",
-    "@react-three/fiber": "^8.10.4",
+    "@react-three/drei": "^9.56.18",
+    "@react-three/fiber": "^8.11.0",
     "@react-three/postprocessing": "^2.7.0",
     "framer-motion": "^9.0.1",
     "gsap": "^3.11.4",

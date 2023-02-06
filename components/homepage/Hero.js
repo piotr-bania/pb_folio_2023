@@ -1,11 +1,13 @@
-import React from 'react'
-
 const Hero = () => {
     return (
-        <section>
-            <h1>Transforming <br /> the digital universe <br /> through code <br /> and creativity</h1>
-            <h3>Fusing technology <br /> and imagination <br /> to create something <br /> truly unique</h3>
-            <button>View my latest missions</button>
+        <section id="hero">
+            <div className="wrapper">
+                <h1 className="heading">Transforming <br /> the digital universe through code and creativity</h1>
+                <h3 className="subheading">Fusing technology and imagination to create something truly unique</h3>
+                <div className="cta">
+                    <button>View my latest missions</button>
+                </div>
+            </div>
         </section>
     )
 }

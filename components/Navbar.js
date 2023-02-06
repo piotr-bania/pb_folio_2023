@@ -6,11 +6,13 @@ const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <section>
-            <header>
+        <section id='navbar'>
+            <div className='wrapper'>
+
                 <Link href="/">
-                <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
+                    <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
                 </Link>
+                
                 <nav>
                     <li>
                         <div className="menu">
@@ -25,7 +27,7 @@ const [isOpen, setIsOpen] = useState(false)
                     </li>
                     <Link href="/public/resume/Piotr_Bania_Resume.pdf"><button className='button'>Resume</button></Link>
                 </nav>
-            </header>
+            </div>
         </section>
     )
 }
