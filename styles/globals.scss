@@ -1,0 +1,151 @@
+/* ------------------------------ Fonts import ------------------------------ */
+// @import url("https://use.typekit.net/pgw0ymf.css");
+
+// @font-face {
+//   font-family: 'AlbraLight';
+//   src: url(../public/fonts/AlbraLight.otf);
+// }
+
+/* ------------------------------ Variables ------------------------------ */
+$purple: #8A3FFC;
+$magenta: #D02670;
+$background: #21272A;
+$backgroundFaded: rgba(105, 112, 119, 0.25);
+$darkGrey: #697077;
+$lightGrey: #D0D0D1;
+$white: #FFFFFF;
+$gradientPurple: linear-gradient(90deg, rgba(138, 63, 252, 1) 0%, rgba(208, 38, 112, 1) 100%);
+$gradientPurpleFaded: linear-gradient(90deg, rgba(138, 63, 252, 0.75) 0%, rgba(208, 38, 112, 0.75) 100%);
+$gradientBackground: linear-gradient(90deg, rgba(105, 112, 119, 0.75) 0%, rgba(105, 112, 119, 0) 80%);
+$gradientBackgroundFaded: linear-gradient(90deg, rgba(105, 112, 119, 0.5) 0%, rgba(105, 112, 119, 0) 80%);
+$gradientOverlay: linear-gradient(0deg, rgba(105, 112, 119, 0) 0%, rgba(105, 112, 119, 1) 100%);
+
+// ---------- Fonts ----------
+$header_font: contralto-small, sans-serif;
+$text_font: proxima-nova, sans-serif;
+
+// ---------- Fluid fonts ----------
+$paragraph: clamp(1rem, 0.43vw + 0.89rem, 1.38rem);
+$header_4: clamp(1.25rem, 0.93vw + 1.02rem, 2.06rem);
+$header_3: clamp(1.56rem, 1.75vw + 1.13rem, 3.09rem);
+$header_2: clamp(1.95rem, 3.07vw + 1.19rem, 4.64rem);
+$header_1: clamp(2.44rem, 5.17vw + 1.15rem, 6.96rem);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+body {
+  background: $background;
+  color: $lightGrey;
+  font-family: $text_font;
+  font-weight: 100;
+  font-style: normal;
+  font-size: $paragraph;
+  line-height: 1.4;
+  margin: auto;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $header_font;
+}
+
+h1 {
+  font-size: $header_1;
+}
+
+h2 {
+  font-size: $header_2;
+}
+
+h3 {
+  font-size: $header_3;
+}
+
+h4 {
+  font-size: $header_4;
+}
+
+p {
+  font-family: $text_font;
+  font-size: $paragraph;
+}
+
+// a {
+//   font-family: $text_font;
+//   font-size: $paragraph;
+
+//   &:hover {
+
+//   }
+
+//   &:focus {
+
+//   }
+// }
+
+// ------------------------------ Strips ------------------------------
+// .strip {
+
+// }
+
+// .one {
+
+// }
+
+// .two {
+
+// }
+
+// .three {
+
+// }
+
+// ------------------------------ Overlay ------------------------------
+// .overlay1 {
+
+// }
+
+// .overlay2 {
+
+// }
+
+// .overlay3 {
+
+// }
+
+// .overlay4 {
+
+// }
+
+// ------------------------------ Button ------------------------------
+// .button {
+
+// }
+
+// ------------------------------ Desktop ------------------------------
+@media screen and (min-width: 1024) {
+
+}
+
+// ------------------------------ Tablet ------------------------------
+@media screen and (min-width: 768) {
+
+}
+
+// ------------------------------ Smartphone ------------------------------
+@media screen and (max-width: 767px) {
+
+}
