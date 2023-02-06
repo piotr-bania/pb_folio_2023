@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Hero from '../components/homepage/Hero'
 import Layout from '../components/Layout'
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
 
             <main>
                 <section>
-                    <h1>This is Homepage</h1>
+                    <Hero/>
                 </section>
             </main>
         </>

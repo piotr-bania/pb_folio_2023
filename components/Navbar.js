@@ -9,7 +9,7 @@ const [isOpen, setIsOpen] = useState(false)
         <>
             <header>
                 <Link href="/">
-                <Image className='logo' src="/svg/logo.svg" alt="logo" width={60} height={60} />
+                <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
                 </Link>
                 <nav>
                     <li>

@@ -1,35 +1,32 @@
 /* ------------------------------ Fonts import ------------------------------ */
-// @import url("https://use.typekit.net/pgw0ymf.css");
+@import url("https://use.typekit.net/wjp2kcg.css");
 
-// @font-face {
-//   font-family: 'AlbraLight';
-//   src: url(../public/fonts/AlbraLight.otf);
-// }
+@font-face {
+  font-family: "arkitech";
+  src: url(/public/fonts/arkitech/arkitech_light.ttf);
+}
 
 /* ------------------------------ Variables ------------------------------ */
-$purple: #8A3FFC;
-$magenta: #D02670;
-$background: #21272A;
-$backgroundFaded: rgba(105, 112, 119, 0.25);
-$darkGrey: #697077;
-$lightGrey: #D0D0D1;
+$purple: #7161F5;
+$green: #61F570;
+$red: #F57061;
+$grey-text: #ABABAB;
+$darker: #040117;
+$dark: #07032E;
+$off_white: #F5F4FE;
 $white: #FFFFFF;
-$gradientPurple: linear-gradient(90deg, rgba(138, 63, 252, 1) 0%, rgba(208, 38, 112, 1) 100%);
-$gradientPurpleFaded: linear-gradient(90deg, rgba(138, 63, 252, 0.75) 0%, rgba(208, 38, 112, 0.75) 100%);
-$gradientBackground: linear-gradient(90deg, rgba(105, 112, 119, 0.75) 0%, rgba(105, 112, 119, 0) 80%);
-$gradientBackgroundFaded: linear-gradient(90deg, rgba(105, 112, 119, 0.5) 0%, rgba(105, 112, 119, 0) 80%);
-$gradientOverlay: linear-gradient(0deg, rgba(105, 112, 119, 0) 0%, rgba(105, 112, 119, 1) 100%);
 
 // ---------- Fonts ----------
-$header_font: contralto-small, sans-serif;
-$text_font: proxima-nova, sans-serif;
+$header_font: 'ethnocentric', sans-serif;
+$text_font: 'arkitech', sans-serif;
 
 // ---------- Fluid fonts ----------
-$paragraph: clamp(1rem, 0.43vw + 0.89rem, 1.38rem);
-$header_4: clamp(1.25rem, 0.93vw + 1.02rem, 2.06rem);
-$header_3: clamp(1.56rem, 1.75vw + 1.13rem, 3.09rem);
-$header_2: clamp(1.95rem, 3.07vw + 1.19rem, 4.64rem);
-$header_1: clamp(2.44rem, 5.17vw + 1.15rem, 6.96rem);
+$link: clamp(0.81rem, 0.11vw + 0.78rem, 0.88rem);
+$paragraph: clamp(1.02rem, 0.4vw + 0.91rem, 1.24rem);
+$header_4: clamp(1.27rem, 0.87vw + 1.05rem, 1.75rem);
+$header_3: clamp(1.59rem, 1.61vw + 1.18rem, 2.47rem);
+$header_2: clamp(1.98rem, 2.75vw + 1.3rem, 3.5rem);
+$header_1: clamp(2.48rem, 4.48vw + 1.36rem, 4.95rem);
 
 * {
   box-sizing: border-box;
@@ -43,12 +40,12 @@ html {
 }
 
 body {
-  background: $background;
-  color: $lightGrey;
+  background: linear-gradient(90deg, $darker, $dark);
+  color: $off_white;
   font-family: $text_font;
+  font-size: $link;
   font-weight: 100;
-  font-style: normal;
-  font-size: $paragraph;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5), 1px 1px 2px rgba(0, 0, 0, 0.1);
   line-height: 1.4;
   margin: auto;
   user-select: none;
@@ -60,41 +57,46 @@ h2,
 h3,
 h4 {
   font-family: $header_font;
+  font-style: normal;
+  line-height: 0.85;
 }
 
 h1 {
   font-size: $header_1;
+  font-weight: 700;
 }
 
 h2 {
   font-size: $header_2;
+  font-weight: 500;
 }
 
 h3 {
   font-size: $header_3;
+  font-weight: 500;
 }
 
 h4 {
   font-size: $header_4;
+  font-weight: 500;
 }
 
-p {
+a {
   font-family: $text_font;
-  font-size: $paragraph;
+  font-size: $link;
+  font-weight: 100;
+  color: $grey-text;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:focus {
+    color: $red;
+  }
 }
-
-// a {
-//   font-family: $text_font;
-//   font-size: $paragraph;
-
-//   &:hover {
-
-//   }
-
-//   &:focus {
-
-//   }
-// }
 
 // ------------------------------ Strips ------------------------------
 // .strip {
@@ -131,21 +133,47 @@ p {
 // }
 
 // ------------------------------ Button ------------------------------
-// .button {
+button {
+  font-family: $text_font;
+  font-size: $link;
+  font-weight: 100;
+  color: $white;
+  background: linear-gradient(-45deg, $purple 0%, $dark 100%);
+  border-radius: 30px 10px 20px 10px;
+  padding: 12px 24px;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  background-size: 400% 400%;
+  animation: button_animation 5s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
 
-// }
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(-45deg, $green 0%, rgba(97, 245, 112, 0.5) 100%);
+  }
+}
+
+@keyframes button_animation {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
 
 // ------------------------------ Desktop ------------------------------
-@media screen and (min-width: 1024) {
-
-}
+@media screen and (min-width: 1024) {}
 
 // ------------------------------ Tablet ------------------------------
-@media screen and (min-width: 768) {
-
-}
+@media screen and (min-width: 768) {}
 
 // ------------------------------ Smartphone ------------------------------
-@media screen and (max-width: 767px) {
-
-}
+@media screen and (max-width: 767px) {}
