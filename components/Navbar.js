@@ -13,7 +13,7 @@ const [isOpen, setIsOpen] = useState(false)
                     <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
                 </Link>
                 
-                <nav>
+                <nav className='horizontal_menu'>
                     <li>
                         <div className="menu">
                             <Link href="/">Home</Link>
@@ -25,7 +25,7 @@ const [isOpen, setIsOpen] = useState(false)
                             <Link href="/contact">Contact</Link>
                         </div>
                     </li>
-                    <Link href="/public/resume/Piotr_Bania_Resume.pdf"><button className='button'>Resume</button></Link>
+                    <Link href="/public/resume/Piotr_Bania_Resume.pdf"><button className='button'>Download Resume</button></Link>
                 </nav>
             </div>
         </section>
