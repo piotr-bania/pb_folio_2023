@@ -31,14 +31,14 @@ export default function Home() {
             >
 
                 <div className='canvas'
-                    // onCreated={(state)=> {
-                    //     state.gl.setClearColor('#192933')
-                    //     state.scene.fog = new Fog('#192933', 1, 5)
-                    // }}
+                    onCreated={(state)=> {
+                        state.gl.setClearColor('#000000')
+                        state.scene.fog = new Fog('#FFFFFF', 1, 10)
+                    }}
                 >
                     <Canvas camera={{
-                        position: [0, 0, 5],
-                        rotation: [0.05, 0.2, 0.2],
+                        position: [-2, 0, 11],
+                        rotation: [0, 0, 0],
                         fov: 25 }}
                         >
                         <Suspense fallback={null}>
