@@ -37,7 +37,8 @@ export default function Home() {
                     // }}
                 >
                     <Canvas camera={{
-                        position: [0, 0, 7],
+                        position: [0, 0, 5],
+                        rotation: [0.05, 0.2, 0.2],
                         fov: 25 }}
                         >
                         <Suspense fallback={null}>

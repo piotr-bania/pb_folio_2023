@@ -18,14 +18,29 @@ const Planet_1 = () => {
 
     const planet = useLoader(GLTFLoader, '/models/homepage/hero_planet.gltf')
 
+    const textureLoader = new TextureLoader()
+    const normalMap = textureLoader.load('/public/models/homepage/textures/bump.jpg')
+    const roughnessMap = textureLoader.load('/public/models/homepage/textures/roughness.jpg')
+    const diffuseMap = textureLoader.load('/public/models/homepage/textures/diffuse.jpg')
+
     return (
         <>
-                        <ambientLight intensity={0.5} color={'#FFFFFF'} />
-            <pointLight castShadow position={[0, 0, 2]} color={'#F57061'} intensity={0.5} />
-            <pointLight castShadow position={[2, 0, -3]} color={'#E6F561'} intensity={0.5} />
+            <ambientLight intensity={0.25} color={'#FFFFFF'} />
+            <pointLight castShadow position={[0, 0, 2]} color={'#F57061'} intensity={0.25} />
+            <pointLight castShadow position={[2, 0, -3]} color={'#E6F561'} intensity={0.25} />
 
             <mesh ref={planetRef}>
                 <primitive object={planet.scene} />
+
+                {/* <sphereGeometry args={[1, 128, 128]} /> */}
+                <meshStandardMaterial 
+                    // map={diffuseMap}
+                    // normalMap={normalMap}
+                    // roughnessMap={roughnessMap}
+                    // displacementMap={normalMap}
+                    // displacementScale={0.92}
+                    // bumpScale={0.92}
+                />
             </mesh>
         </>
     )
