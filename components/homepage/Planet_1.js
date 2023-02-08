@@ -5,16 +5,18 @@ import { useControls } from 'leva'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { MeshStandardMaterial, TextureLoader } from 'three'
 
+import Model from '../models/Hero_planet'
+
 const Planet_1 = () => {
 
     const planetRef = useRef()
 
     useFrame((state, delta) => {
-        planetRef.current.rotation.y -= 0.002,
-        planetRef.current.rotation.x += 0.003
+        planetRef.current.rotation.y -= 0.0002,
+        planetRef.current.rotation.x -= 0.0001
     })
 
-    // const gltf = useLoader(GLTFLoader, "/models/homepage/hero_planet/gltf")
+    const planet = useLoader(GLTFLoader, '/models/homepage/hero_planet.gltf')
 
     return (
         <>
@@ -23,8 +25,7 @@ const Planet_1 = () => {
             <pointLight castShadow position={[2, 0, -3]} color={'#E6F561'} intensity={0.5} />
 
             <mesh ref={planetRef}>
-                <icosahedronGeometry />
-                <meshStandardMaterial color={'#7161F5'}/>
+                <primitive object={planet.scene} />
             </mesh>
         </>
     )

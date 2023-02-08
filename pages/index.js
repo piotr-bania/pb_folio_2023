@@ -31,10 +31,10 @@ export default function Home() {
             >
 
                 <div className='canvas'
-                    onCreated={(state)=> {
-                        state.gl.setClearColor('#192933')
-                        state.scene.fog = new Fog('#192933', 1, 5)
-                    }}
+                    // onCreated={(state)=> {
+                    //     state.gl.setClearColor('#192933')
+                    //     state.scene.fog = new Fog('#192933', 1, 5)
+                    // }}
                 >
                     <Canvas camera={{
                         position: [0, 0, 7],
