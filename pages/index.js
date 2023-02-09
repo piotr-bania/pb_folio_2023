@@ -8,6 +8,7 @@ import { Fog } from 'three'
 
 import Hero from '../components/homepage/Hero'
 import Planet_1 from '../components/homepage/Planet_1'
+import Opening_scene from '../components/homepage/Opening_scene'
 
 export default function Home() {
     return (
@@ -24,30 +25,32 @@ export default function Home() {
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
                 transition={{
-                    duration: 1.25,
+                    duration: 1,
                     ease: 'easeOut',
                     delay: 0.25
                 }}
             >
 
                 <div className='canvas'
-                    onCreated={(state)=> {
-                        state.gl.setClearColor('#000000')
-                        state.scene.fog = new Fog('#FFFFFF', 1, 10)
-                    }}
+                    // onCreated={(state)=> {
+                    //     state.gl.setClearColor('#000000')
+                    //     state.scene.fog = new Fog('#FFFFFF', 1, 10)
+                    // }}
                 >
                     <Canvas camera={{
-                        position: [-2, 0, 11],
+                        position: [-1, 0, 6],
                         rotation: [0, 0, 0],
                         fov: 25 }}
                         >
                         <Suspense fallback={null}>
-                            <Planet_1 />
+                            {/* <Planet_1 /> */}
+                            {/* <Fog /> */}
                         </Suspense>
                     </Canvas>
                 </div>
                 
-                <Hero />
+                {/* <Hero /> */}
+                <Opening_scene />
             </m.main>
         </>
     )
