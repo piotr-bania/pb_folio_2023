@@ -21,12 +21,12 @@ export default function Home() {
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
                 transition={{
-                    duration: 1,
-                    ease: 'easeOut',
+                    duration: 2,
+                    ease: 'easeInOut',
                     delay: 0.25
                 }}
             >                
-                {/* <Opening_scene /> */}
+                <Opening_scene />
                 <Hero />
                 {/* <Menu /> */}
             </m.main>

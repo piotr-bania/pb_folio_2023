@@ -1,13 +1,14 @@
 @import '/styles/globals';
 
 .canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+    border: 1px solid yellow;
 }
 
 #hero {
@@ -21,10 +22,6 @@
         width: 100%;
     }
 }
-
-// #hero, .heading, .subheading, .cta {
-//     border: 1px solid yellowgreen;
-// }
 
 /* ------------------------------ Desktop ------------------------------ */
 @media screen and (min-width: 1280px) {
