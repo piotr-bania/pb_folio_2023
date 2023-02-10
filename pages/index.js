@@ -1,11 +1,11 @@
+import React, { useRef } from 'react'
 import Head from 'next/head'
 import { motion as m } from 'framer-motion'
-import React from 'react'
 
-import Hero from '../components/homepage/Hero'
 import Opening_scene from '../components/homepage/Opening_scene'
-import Menu from '../components/homepage/Menu'
 import Experience from '../components/homepage/Experience'
+import Hero from '../components/homepage/Hero'
+import Projects from '../components/homepage/Projects'
 
 export default function Home() {
     return (
@@ -28,9 +28,9 @@ export default function Home() {
                 }}
             >                
                 <Opening_scene />
-                <Hero />
                 <Experience />
-                <Menu />
+                <Hero />
+                <Projects />
             </m.main>
         </>
     )

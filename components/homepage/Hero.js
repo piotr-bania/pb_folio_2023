@@ -29,7 +29,7 @@ const Hero = () => {
                     initial={{opacity: 0}}
                     animate={{ opacity: 1, transition: {delay: 9.5, duration: 2, ease: 'easeInOut'} }}
                     >
-                    <Link href='#projects'><button>View my latest missions</button></Link>
+                    <Link href='#projects' scroll={false}><button>View my latest missions</button></Link>
                 </m.div>
             </section>
         </AnimatePresence>

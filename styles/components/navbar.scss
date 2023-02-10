@@ -1,26 +1,19 @@
 @import '/styles/globals';
 
 #navbar {
+    position: absolute;
+    top: 0;
     .wrapper {
         position: fixed;
-        height: 60px;
-        margin: auto;
         display: flex;
-        align-items: center;
         justify-content: space-between;
         z-index: 100;
-
-        .logo {
-            cursor: pointer;
-            position: fixed;
-        }
 
         nav {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 1vw;
-
+    
             li {
                 a {
                     padding: 0 1vw;
@@ -32,14 +25,9 @@
 
 /* ------------------------------ Desktop ------------------------------ */
 @media screen and (min-width: 1024px) {
-    #navbar {        
+    #navbar {     
         .wrapper {
-            top: 40px;
-            width: calc(100% - 240px);
-
-            .logo {
-                top: 40px;
-            }
+            width: calc(100% - 180px);
         }
     }
 }
@@ -48,16 +36,7 @@
 @media screen and (min-width: 768) and (max-width: 1023px) {
     #navbar {
         .wrapper {
-            top: 20px;
-            width: calc(100% - 80px);
-
-            .logo {
-                top: 20px;
-            }
-
-            .horizontal_menu {
-                display: none;
-            }
+            width: calc(100% - 100px);
         }
     }
 }
@@ -66,12 +45,7 @@
 @media screen and (max-width: 767px) {
     #navbar {
         .wrapper {
-            top: 10px;
             width: calc(100% - 20px);
-
-            .logo {
-                top: 10px;
-            }
         }
     }
 }

@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { AnimatePresence, motion as m } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
-const [isOpen, setIsOpen] = useState(false)
 
     return (
         <section id='navbar'>
-            <div className='wrapper'>
-
+            <m.div
+                className="wrapper"
+                initial={{opacity: 0}}
+                animate={{ opacity: 1, transition: {delay: 8, duration: 2, ease: 'easeInOut'} }}
+                >
                 <Link href="/">
                     <Image className='logo' src="/logo/logo.svg" alt="logo" width={60} height={60} />
                 </Link>
@@ -25,9 +28,11 @@ const [isOpen, setIsOpen] = useState(false)
                             <Link href="/contact">Contact</Link>
                         </div>
                     </li>
-                    <Link href="/public/resume/Piotr_Bania_Resume.pdf"><button className='button'>Download Resume</button></Link>
+                    <Link href="/resume/Piotr_Bania_Resume.pdf" target="_blank">
+                        <button className='button'>Download Resume</button>
+                    </Link>
                 </nav>
-            </div>
+            </m.div>
         </section>
     )
 }

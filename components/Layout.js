@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './Navbar'
 import Strips from './Strips'
 import Footer from './Footer'
@@ -6,10 +5,10 @@ import Footer from './Footer'
 const Layout = ({children}) => {
     return (
         <>
-            {/* <Navbar />
-            <Strips /> */}
+            <Navbar />
+            <Strips />
             { children }
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

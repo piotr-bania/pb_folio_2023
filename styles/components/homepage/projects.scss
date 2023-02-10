@@ -1,0 +1,75 @@
+@import '/styles/globals';
+
+#projects {
+    margin: 20vh auto;
+
+    .header {
+        width: 100%;
+    }
+
+    .image {
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        filter: grayscale(100%);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+    }
+
+    .i1 {
+        background-image: url(../../../public/projects//folio_2022.jpg);
+    }
+
+    .project_wrapper {
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+    }
+}
+
+/* ------------------------------ Desktop ------------------------------ */
+@media screen and (min-width: 1280px) {
+    #projects {
+        .header {
+            grid-area: 1 / 3 / 2 / 8;
+        }
+
+        .p1 {
+            grid-area: 2 / 1 / 3 / 5;
+            margin-top: 10vh;
+        }
+
+        .image {
+            height: 300px;
+            margin-bottom: 10px;
+        }
+
+        .project_wrapper {
+            grid-area: 3 / 2 / 4 / 6;
+
+            .links {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+/* ------------------------------ Tablet ------------------------------ */
+// @media screen and (min-width: 768px) and (max-width: 1279px) {
+//     #projects {
+
+//     }
+// }
+
+/* ------------------------------ Smartphone ------------------------------ */
+// @media screen and (max-width: 767px) {
+//     #projects {
+
+// }

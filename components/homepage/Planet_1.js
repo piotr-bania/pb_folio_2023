@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
+
 const Planet_1 = () => {
 
     const planetRef = useRef()
