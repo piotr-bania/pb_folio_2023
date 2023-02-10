@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import '../styles/components/navbar.scss'
 import '../styles/components/homepage/hero.scss'
 import '../styles/components/homepage/opening_scene.scss'
+import '../styles/components/menu.scss'
 
 import Layout from '../components/Layout'
 

@@ -1,14 +1,10 @@
 import Head from 'next/head'
-
 import { motion as m } from 'framer-motion'
 import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-
-import { Fog } from 'three'
 
 import Hero from '../components/homepage/Hero'
-import Planet_1 from '../components/homepage/Planet_1'
 import Opening_scene from '../components/homepage/Opening_scene'
+import Menu from '../components/homepage/Menu'
 
 export default function Home() {
     return (
@@ -29,28 +25,10 @@ export default function Home() {
                     ease: 'easeOut',
                     delay: 0.25
                 }}
-            >
-
-                <div className='canvas'
-                    // onCreated={(state)=> {
-                    //     state.gl.setClearColor('#000000')
-                    //     state.scene.fog = new Fog('#FFFFFF', 1, 10)
-                    // }}
-                >
-                    <Canvas camera={{
-                        position: [-1, 0, 6],
-                        rotation: [0, 0, 0],
-                        fov: 25 }}
-                        >
-                        <Suspense fallback={null}>
-                            {/* <Planet_1 /> */}
-                            {/* <Fog /> */}
-                        </Suspense>
-                    </Canvas>
-                </div>
-                
-                {/* <Hero /> */}
-                <Opening_scene />
+            >                
+                {/* <Opening_scene /> */}
+                <Hero />
+                {/* <Menu /> */}
             </m.main>
         </>
     )
