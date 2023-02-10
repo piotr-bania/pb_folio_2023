@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import { motion as m } from 'framer-motion'
-import React, { Suspense } from 'react'
+import React from 'react'
 
 import Hero from '../components/homepage/Hero'
 import Opening_scene from '../components/homepage/Opening_scene'
 import Menu from '../components/homepage/Menu'
+import Experience from '../components/homepage/Experience'
 
 export default function Home() {
     return (
@@ -21,14 +22,15 @@ export default function Home() {
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
                 transition={{
-                    duration: 2,
+                    duration: 1,
                     ease: 'easeInOut',
                     delay: 0.25
                 }}
             >                
                 <Opening_scene />
                 <Hero />
-                {/* <Menu /> */}
+                <Experience />
+                <Menu />
             </m.main>
         </>
     )

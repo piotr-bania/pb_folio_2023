@@ -1,5 +1,20 @@
 @import '/styles/globals';
 
 #menu {
-    border: 1px solid yellow;
+    position: absolute;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border: 1px dotted yellow;
+}
+
+.canvas_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    border: 1px dotted hotpink;
 }

@@ -1,17 +1,17 @@
-import React, { Suspense, useState, useRef, useEffect } from 'react'
-import { Canvas, useFrame  } from '@react-three/fiber'
+import React, { Suspense, useRef } from 'react'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { Text } from '@react-three/drei'
 
 const Menu = () => {
-  return (
-    <section id='menu'>
-        <Canvas className='canvas'>
-            <Suspense fallback={null}>
+    return (
+        <>
+            <mesh scale={[0.5, 0.5, 0.5]} position={[5, 2.5, 1]}>
+                <boxGeometry />
+                <meshBasicMaterial color="#7161F5" />
+            </mesh>
 
-            </Suspense>
-        </Canvas>
-        <h1>Menu</h1>
-    </section>
-  )
+        </>
+    )
 }
 
 export default Menu

@@ -1,11 +1,6 @@
 import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { OrbitControls, Text, Float, useTexture } from '@react-three/drei'
-import { useControls } from 'leva'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { MeshStandardMaterial, TextureLoader } from 'three'
-
-import Model from '../models/Hero_planet'
 
 const Planet_1 = () => {
 
