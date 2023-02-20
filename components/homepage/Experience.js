@@ -20,7 +20,9 @@ const Experience = () => {
                     <Suspense fallback={null}>
                         <Planet_1 />
                     </Suspense>
-                    <Environment files={'./environment/kloppenheim_02_puresky_4k.hdr'} background blur={0.025} />
+                    <Environment files={'./environment/kloppenheim_02_puresky_4k.hdr'}
+                    // background blur={0.025}
+                    />
                     
                     <EffectComposer>
                         <Scanline density={1.5} opacity={0.15}/>

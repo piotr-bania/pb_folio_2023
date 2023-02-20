@@ -16,7 +16,7 @@ const Planet_1 = () => {
 
     return (
         <>
-            <ambientLight intensity={0.5} color={'#61F570'} />
+            <ambientLight intensity={0.05} color={'#61F570'} />
             <pointLight castShadow position={[-2, -1, 2]} color={'#7161F5'} intensity={0.75} />
             <pointLight castShadow position={[2, 3, -2]} color={'#A362F5'} intensity={0.75} />
 
